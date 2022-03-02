@@ -10,12 +10,12 @@ mailboks = """"
    |__/___\_
 """
 #varibler
-count = 0 # en telle variabler for hvor mange som er sendt
+count = 0 
 print(mailboks + 'tool by Wefring')
 Subject = input('mail topic: ') 
 body = input('message in the mail: ')
 sender_email = input('bot email: ')  #
-password = input('bot password: ')   #navn og uno two tre
+password = input('bot password: ')   
 reciver_mail = input('target: ')
 print('Your bot account', sender_email, ' ', ('with password'), ' ', password, ' ', ('target'), ' >', reciver_mail,)
 print('MAIL PREVIEW:V')
@@ -35,12 +35,11 @@ def sendmailen(): #
         server.login(sender_email, password)
         server.sendmail(sender_email, reciver_mail, message.as_string())
         print("sent! mail > NR",count) 
- # for og være sikker på at de har skrevet riktig 
 print('to make sure you entered everything right!')
 conf = input('type confirm to start mail spam > ')
-if conf == "confirm": #når de skriver confirm >
+if conf == "confirm": 
     print('Starting spam ')
-    for repeat in range(90): #loops 90)
+    for repeat in range(90): 
         count = count+1
         sendmailen()
         sleep(0.3)
